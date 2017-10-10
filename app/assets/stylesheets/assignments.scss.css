@@ -1,0 +1,12 @@
+.box {
+  width: 150px;
+}
+
+/*for IE10*/
+select::-ms-expand {
+    display: none;
+}
+
+#buttons-container {
+  margin: 20px 0;
+}

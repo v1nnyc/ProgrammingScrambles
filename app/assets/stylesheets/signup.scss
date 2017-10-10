@@ -1,0 +1,39 @@
+@mixin placeholder($color) {
+  -webkit-input-placeholder: $color; // Chrome/Opera/Safari
+           -moz-placeholder: $color; // Firefox 19+
+      -ms-input-placeholder: $color;  // IE 10+ 
+}
+
+@mixin transform ($transform) {
+  -webkit-transform: $transform;
+      -ms-transform: $transform;
+       -o-transform: $transform;
+          transform: $transform;
+}
+
+
+body {
+  background-color: #247ba0 !important;
+}
+
+
+/* Log in Form CSS */
+#form-container {
+  background-color: #fff;
+  box-shadow: 5px 5px 5px #000;
+  padding: 2rem;
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  @include transform ( translate(-50%, -50%) );
+}
+/* Log in Form CSS */
+
+
+/**/
+.input {  
+  background-color: rgb(237, 237, 237);
+  height: 65px;
+  @include placeholder( black ); //Recolor the placeholder for each browser
+}
+/* End of Username Field CSS */
