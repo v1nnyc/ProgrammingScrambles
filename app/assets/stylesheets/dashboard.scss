@@ -1,0 +1,184 @@
+// Place all the styles related to the Dashboard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+/* Top Navigation Bar*/
+#top-navbar {
+  height: 50px;
+  
+  #cross-section-side {
+    background-color: #1c6280;
+    height: inherit;
+    color:white;
+    font-family: 'Indie Flower', cursive;
+    padding: 0;
+    
+    
+    /* Logo */
+    #logo {
+      display:table;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      
+      a {
+        display: table-cell;
+        vertical-align: middle;
+        color:white;
+        font-size: 16pt;
+        
+        &:hover {
+          color:white;
+          background-color: inherit;
+        } 
+      }
+    }
+    /* End of Logo */
+  }
+  
+  
+  /* Top Navbar Buttons */
+  #non-cross-section-side  {
+    background-color: #247ba0;
+    height: inherit;
+    
+    #button-wrapper {
+      display: table;
+      height: 100%;
+      
+      a {
+        color: white;
+        display: table-cell;
+        vertical-align: middle;
+        padding-right: 1rem;
+        &:hover{
+          color: white;
+          background-color: inherit;
+        }
+      }
+      
+      form {
+        color: white;
+        display: table-cell;
+        vertical-align: middle;
+        padding-right: 1rem;
+        input {
+          background: inherit;
+          border:none;
+        }
+      }
+    }
+  }
+}
+
+
+/* Side Navigation Bar*/
+#side-navbar {
+  background-color: #164e66;
+  height: 100%;
+  position: fixed;
+  
+  .btn {
+    color:white;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 13pt;
+    
+    img {
+      padding: 1rem;
+    }
+  }
+  #nav-main-button-group {
+    height: 80%;
+  }
+  #log-out {
+    color: white !important;
+    &:hover {
+      color: white !important;
+      background-color: inherit;
+    }
+  }
+}
+/* End of Side Navigation Bar*/
+
+
+/* Main Block */
+.main-block {
+  padding: 1rem;
+}
+/* End of Main Block */
+
+
+
+/* Classroom Butoon */
+#classroom-btn {
+  color: white;
+  background-color: inherit;
+
+  &:hover {
+    color: white;
+    background-color: inherit;
+  }
+}
+/* End of Classroom Button*/
+
+
+/* List Boxes */
+.class-list-box {
+  width: 30%;
+  display: inline-block;
+  padding: 3rem;
+  box-shadow: 2px 2px 9px gray;
+  margin: 1rem;
+  
+  .class-info {
+  }
+}
+/* End of List Boxes */
+
+
+
+
+/* create Form CSS */
+.create-form {
+  background-color: #fff;
+  box-shadow: 5px 5px 5px #000;
+  padding: 2rem;
+
+ /*
+  *  Where the magic happens
+  *  Centering method from CSS Tricks
+  *  http://css-tricks.com/centering-percentage-widthheight-elements/
+  */
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+/* create Form CSS */
+
+/* Username Field CSS */
+.create-form-text-field{  
+  background-color: #ededed;
+  height: 65px;
+}
+
+.create-form-text-field::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+}
+.create-form-text-field::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+}
+.create-form-text-field::-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+.create-form-text-field::-moz-placeholder { /* Firefox 18- */
+  color: black;
+}
+/* End of Username Field CSS */

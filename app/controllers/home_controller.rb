@@ -3,7 +3,6 @@ class HomeController < ApplicationController
 
   # Default index homepage for website.
   def index
-    # Redirect to login for now.
 
   end
 
