@@ -1,0 +1,206 @@
+<%#
+  Page Description:
+    This page is landing page, where it describes its functioanlity.
+
+  Tags:
+    main page, mainpage, landing, landing page, land, main
+%>
+
+
+<% content_for :css_block do %>
+<%# CSS %>
+  <%# Webfonts%>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans" rel="stylesheet">
+    <%# Webfont usage 
+      font-family: 'Indie Flower', cursive;
+      font-family: 'Open Sans', sans-serif;
+    %>
+  <%# The End of Webfont %>
+<%# CSS END%>
+<% end %>
+
+
+<% content_for :nav_bar do %>
+<%# Nav Bar %>
+<header>
+  <nav class="nav-wrapper">
+  <div id="logo">Wonderland</div>
+  <div id="login-signup">
+    <ul>
+      <li><%= link_to @loginDisplayName, @login, :method => @reqType %></li>
+      <%# Display Sign Up button only if user has not logged in%>
+      <% if !@loginFlag %>
+        <li><a href="/registration/new">Sign Up</a></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class ="nav-btn-group" align="center">   
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#news">Example</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+      <%# Display Dashboard button only if user logged in%>
+      <% if @loginFlag %>
+        <li><%= link_to "Dashboard", :user_dashboard, :method => :get %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  </nav>
+</header>
+<%# The End of Nav Bar %>
+<% end %>
+
+
+
+<%# Introduction Section%>
+<div id="intro">
+  <div class="row" align="center">
+    <h1> Study is not hard with Wonderland </h1>
+    <a href="#" class="large button intro-btn">Find Out More</a>
+  </div>
+</div>
+<%# The End of Introduction Section%>
+
+<%# Information Section%>
+<div id="info">
+  <div class="row" align="center">
+    <div class="column large-4">
+      <div class="callout">
+        <img src="/icons/163800-kids-avatars/png/boy.png" width="80" height="80">
+        <img src="/icons/163800-kids-avatars/png/girl.png" width="80" height="80">
+        <h5>Students</h5>
+        <p>Wonderland let students have a fun to study on coding</p>
+        <a href="" class="large button info-btn">Learn More</a>
+      </div>
+    </div>
+    <div class="column large-4">
+      <div class="callout">
+        <img src="/icons/122443-color-professions-avatars/png/teacher.png" width="80" height="80">
+        <h5>Teachers</h5>
+        <p>
+          No more painful grading and attandance taking.
+          Wonderland helps teachers manage their classes.
+        </p>
+        <a href="" class="large button info-btn">Learn More</a>
+      </div>
+    </div>
+    <div class="column large-4">
+      <div class="callout">
+        <img src="/icons/167706-education-elements/png/blackboard.png" width="80" height="80">
+        <h5>Classrooms</h5>
+        <p>Don’t need classroom and you can easily handle a large classroom</p>
+        <a href="" class="large button info-btn">Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>
+<%# End of Information Section%>
+
+<%# Teacher Section%>
+<div id="teacher-info">
+  <div class="column large-6" id="teacher-info-left">
+    <h2>Don't waste your time</h2>
+    <div class="row">
+      <div class="column large-2 medium-1 small-1">
+        <img src="/icons/148705-essential-collection/png/list.png">
+      </div>
+      <div class="column large-10 medium-10 small-10"> 
+        <h5>
+          Automatic grades will let you
+          track of students’ performance
+          easier and faster
+        </h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column large-2 medium-1 small-1">
+        <img src="/icons/138544-interaction-assets/png/database-14.png">
+      </div>
+      <div class="column large-10 medium-10 small-10">
+        <h5>
+          Easy migration tool from your Canvas provided
+        </h5>
+      </div>
+    </div>
+  </div>
+  <div class="column large-6" id="teacher-info-right" >
+    &nbsp;
+  </div>
+</div>
+<%# End of Teacher Section%>
+
+
+<%# Student Section%>
+<div id="student-info">
+  <div class="column large-6" id="student-info-left">
+    &nbsp;
+  </div>
+  <div class="column large-6" id="student-info-right" >
+    <div align="center">
+      <h2>Whenever and Whenever You want</h2>
+    </div>
+
+    <div class="row">
+      <div class="column large-2 medium-1 small-1">
+        <img src="/icons/140788-user-interface-elements/png/browser-38.png">
+      </div>
+      <div  class="column large-10 medium-10 small-10">
+        <h5>Easier Snippets of code</h5>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="column large-2 medium-1 small-1">
+        <img src="/icons/138496-game-assets/png/pacman-1.png">
+      </div>
+      <div  class="column large-10 medium-10 small-10">
+        <h5>Fun and Interactive</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column large-2 medium-1 small-1">
+        <img src="/icons/148705-essential-collection/png/save.png">
+      </div>
+      <div  class="column large-10 medium-10 small-10">
+        <h5>Never Lose Your work!</h5>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+<%# End of student Section%>
+
+
+<%# Footer Section%>
+<footer id="footer">
+  <div id="footer-btn-group" class="row" align="center">
+    <a href="">What's Alice</a>|
+    <a href="">About Us</a>|
+    <a href="">Contact Us</a>|
+    <a href="">Log In</a>|
+    <a href="">Sign Up</a>
+  </div>
+  <div id="footer-about-ucsd" class="row" align="center">
+      UC San Diego<br>
+      9500 Gilman Dr., La Jolla, CA 92093<br>
+      (858) 534-2230<br>
+      Copyright ©2016<br>
+      Regents of the University of California.<br>
+      All rights reserved.<br><br>
+      <a href="http://www.flaticon.com/authors/madebyoliver">Icons Designed by  Madebyoliver or Freepik and distributed by Flaticon</a> 
+  </div>  
+</footer>
+<%# The End of footer Section%>
+
+
+<script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript">
+
+
+</script>

@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
+ 
+
+    #Homepage Related Routes
+    get 'home' => 'home#index'
+
+    #Dashboard Related Routes
+    get 'dashboard/index' => 'dashboard#index', as: :user_dashboard
+
+    # Obligatory Home Root
+    root :to => 'home#index'
+
+    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
