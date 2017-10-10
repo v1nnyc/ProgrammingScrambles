@@ -1,0 +1,212 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin background-size( $size ) {
+  background-size: $size;
+  -webkit-background-size: $size;
+  -moz-background-size: $size;
+  -o-background-size: $size;
+  background-size: $size;
+}
+
+/*Navigation CSS*/
+.nav-wrapper {
+  background-color: #257ba0;
+  color: white;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline-block;
+
+
+    li {
+      float: left;
+      a {
+        display: block;
+        color: inherit;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        background-color: inherit;
+      }
+    }
+  }
+
+  #logo {
+    font-family: 'Indie Flower', cursive;
+    font-size:42px;
+    display: inline-block;
+    color: inherit;
+    padding-left:1rem;
+    text-decoration: none;
+    position: absolute;
+  }
+
+  #login-signup {
+    float: right;
+  }
+}
+/* End of Navigation CSS*/
+
+
+
+/* intro jumbotron CSS*/
+  #intro {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-image: url(/img/index/royaltyfree/students_class.png);
+    background-repeat: no-repeat;
+    @include background-size( cover );
+  }
+
+  #intro {
+    color: white;
+  }
+
+  .intro-btn {
+    background-color: #f15f5c;
+    border-radius: 5px;
+
+    &:visited{
+      color:white;
+    }
+
+    &:hover {
+      color:white;
+      background-color: #d95552;
+    }
+
+  }
+/* End of intro jumbotron CSS*/
+
+/* information jumbotron CSS*/
+  #info {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .callout {
+      height: 20rem;
+    }
+  }
+
+  .info-btn {
+    margin-top: 2rem;
+    background-color: #70c1b3;
+    border-radius: 5px;
+    color: white;
+
+    &:visited {
+      color:white;
+    }
+    &:hover {
+      background-color: #62a89d;
+    }
+  }
+  
+  
+/* End of information jumbotron CSS*/
+
+
+/*Teacher info css */
+  @media screen and (max-width: 1023px) {
+    #teacher-info-right{
+      display: none;
+    }
+  }
+
+  #teacher-info {
+    background-color: #70c1b3;
+    padding-bottom: 200px;
+    color:white;
+    height: 400px;
+
+    .row {
+      margin: 2rem;
+    }
+
+    img {
+      width: 50%;
+    }
+  }
+
+
+  #teacher-info-left {
+    padding-top: 50px;
+
+  }
+  #teacher-info-right {
+    background-image: url(/img/index/royaltyfree/teacher2.jpg);
+    height: inherit;
+    background-repeat: no-repeat;
+    @include background-size (cover);
+  } 
+/*Teacher info css */
+
+
+
+
+/*student info css */
+  @media screen and (max-width: 1023px) {
+    #student-info-left{
+      display: none;
+    } 
+  }
+  #student-info {
+    background-color: #f15f5c;
+    padding-bottom: 200px;
+    color:white;
+    height: 400px;
+
+    .row {
+      margin: 2rem;
+    }
+
+    img {
+      width: 50%;
+    }
+  }
+
+
+  #student-info-right {
+    padding-top: 50px;
+
+  }
+  #student-info-left {
+    background-image: url(/img/index/royaltyfree/student-study.jpg);
+    height: inherit;
+    background-repeat: no-repeat;
+    @include background-size (cover);
+  }
+
+/*student info css */
+
+
+
+/*footer */
+#footer {
+  padding-top: 35px;
+  background-color: #50524f;
+  height: 250px;
+  color: white;
+  
+  #footer-btn-group {
+    padding-bottom: 2rem;
+  }
+
+  a{
+    color: white;
+    margin: 3rem;
+    &:hover{
+      color: white;
+      background-color: inherit;   
+    }
+  }
+}
+/*End of Footer*/
