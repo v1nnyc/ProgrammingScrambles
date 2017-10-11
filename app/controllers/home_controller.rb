@@ -3,6 +3,7 @@ class HomeController < ApplicationController
 
   # Default index homepage for website.
   def index
+
   end
 
   # Shared page with various Options.

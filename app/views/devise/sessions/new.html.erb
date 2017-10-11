@@ -1,0 +1,61 @@
+<%#
+  Page Description:
+    This page is login page, where it allow users to login to their
+    account
+
+
+  Tags:
+      log, in, login, signin, sign
+%>
+
+<%# CSS %>
+   <%= stylesheet_link_tag 'manifest_login_signup_page', :media=> 'all', 'data-turbolinks-track' => true %>
+  <%# Webfonts%>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Open+Sans" rel="stylesheet">
+    <%# Webfont usage 
+      font-family: 'Indie Flower', cursive;
+      font-family: 'Open Sans', sans-serif;
+    %>
+  <%# The End of Webfont %>
+<%# CSS END%>
+
+<%# Log in form div%>
+<div class="row">
+  <div id="login-form" class="column large-5 small-11">
+
+    <%# Title %>
+    <h2 id="title" align="center">Wonderland</h2>
+  
+    <%# Actual form starts here and rendered by ruby%>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+      <%# Username %>
+      <div class="field">
+        <%= f.email_field :email, autofocus: true, placeholder: 'Username' %>
+      </div>
+
+      <%# Pasword %>
+      <div class="field">
+        <%= f.password_field :password, autocomplete: "off", placeholder: 'Password' %>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end -%>
+      
+      <div id="external-links">
+        <%= render "devise/shared/links" %>
+      </div>
+      
+      <div class="actions">
+        <%= f.submit "Log in", :class => 'expanded button', :id => 'submit-btn' %>
+      </div>
+
+    <% end %>
+
+    
+  </div>
+</div>

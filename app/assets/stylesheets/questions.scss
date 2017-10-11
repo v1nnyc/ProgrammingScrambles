@@ -1,0 +1,357 @@
+
+/* Block color Variables*/
+$DIO-color: #c4c476;
+$DT-color: #73386d;
+$ifElse-color: #588165;
+$loop-color: #598b90;
+$while-color: #4fad97;
+$FAIO-color: #dd9090;
+$FAT-color: #ce7ede;
+$wait-color: #e29f61;
+
+
+
+body {
+  background-color: #257ba0 !important;
+}
+
+.question-create-form-wrapper {
+  border: 1px solid #eee;
+  background-color: white;
+  box-shadow: 5px 5px 5px 5px black;
+  
+  margin-bottom: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.question-create-btn {
+  padding: 2rem;
+}
+
+
+/* Logo Related CSS*/
+.top-nav-bar {
+  height: 7rem;
+
+  #logo {
+    font-family: 'Indie Flower', cursive;
+    font-size:42px;
+    text-decoration: none;
+    color: white;
+    line-height: normal;
+  }  
+
+  #logo:hover {
+    background-color: inherit;
+  }
+}
+
+
+
+/* New Question CSS */
+textarea {
+  resize: none;
+}
+
+div#answer {
+  display: none;
+}
+p {
+  margin: 10px 0 0 0;
+}
+
+/* Preview and Show Views CSS
+
+Container, Send and Restart buttons
+*/
+.form-container {
+  border: 2px solid black;
+}
+
+div#description {
+  width: 600px;
+  height: 100px;
+}
+
+div{
+  &#tilescontainer {
+    #DIO-Btn, #Alice-DIO-Btn {
+      background-color: $DIO-color;
+    }
+
+    #DT-Btn, #Alice-DT-Btn {
+      background-color: $DT-color;
+    }
+
+    #ifElse-Btn, #Alice-ifElse-Btn, #Python-if-Btn, #Python-ifElse-Btn, #Java-if-Btn, #Java-ifElse-Btn, #Scratch-if-Btn, #Scratch-ifElse-Btn,#Pencil-if-Btn ,#Pencil-ifElse-Btn {
+      background-color: $ifElse-color;
+    }
+
+    #loop-Btn, #Alice-loop-Btn {
+      background-color: $loop-color;
+    }
+
+    #while-Btn, #Alice-while-Btn, #Python-while-Btn, #Java-while-Btn, #Scratch-when-Btn, #Pencil-while-Btn, #Pencil-read-Btn, #Pencil-listen-Btn {
+      background-color: $while-color;
+    }
+
+    #FAIO-Btn, #Alice-FAIO-Btn, #Python-for-Btn, #Java-for-Btn, #Scratch-repeat-Btn, #Pencil-for-Btn {
+      background-color: $FAIO-color;
+    }
+
+    #FAT-Btn, #Alice-FAT-Btn {
+      background-color: $FAT-color;
+    }
+
+    #wait-Btn, #Alice-wait-Btn, #Scratch-forever-Btn, #Scratch-repeatUntil-Btn {
+      background-color: $wait-color;
+    }
+
+    #updateAnswer {
+      background-color: #343bd6;
+    }
+
+    #restart-Btn {
+      background-color: #e29f61;
+    }
+
+    #clear-Btn {
+      background-color: #e29f61;
+    }
+
+    #send {
+      width: 100px;
+      height: 50px;
+      background-color: #8a8a8a;
+      color: #ffffff;
+      font-size: 20px;
+    }
+
+    .tiles {
+      width: 100px;
+      height: 50px;
+      color: #fff;
+      font-size: 20px;
+      float: left;
+    }
+  }
+}
+
+
+/* Container for Scramble and Answer lists */
+
+#container {
+
+
+  #scramble {
+    background-color: #d1d1d1;
+    min-height: 500px;
+    padding: 0;
+    margin: 0;
+    overflow:hidden;
+    //border: 3px solid #cf4545;
+  }
+
+  #answer {
+    background-color: #d1d1d1;
+    //border: 3px solid #4557cf;
+    min-height: 500px;
+    min-width: 400px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .scramble-container-title {
+    /* Scramble titles css goes here*/
+  }
+
+
+  ol {
+    padding: 0;
+    margin-left: 0;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 5px;
+  }
+
+
+}
+
+.img_resize {
+    width: 100%;
+    height: 30px;
+}
+/* Answer Feedback */
+
+#feedback {
+  font-size: 35px;
+  margin-left: 50px;
+  margin-top: 50px;
+  text-align: center;
+  color: #000;
+}
+
+/* Links to go back and edit question */
+
+div#options {
+  width: 10%;
+  font-size: 20px;
+  float: left;
+}
+
+
+
+
+/* Container Styles */
+.scramble_container_style {
+  
+
+  .connected {
+    height: 2rem;
+  }
+
+  .answer-block {
+    height: 100%;
+    min-height: 5rem;
+    border: 1px solid #aaa;
+  }
+
+  .else-answer-block {
+    height: 100%;
+    min-height: 5rem;
+    border: 1px solid #fff;
+  }
+
+  .title-block {
+    margin-bottom: 1rem;
+  }
+
+  &.ifElse-style, &.Alice-ifElse-style, &.Python-if-style, &.Python-ifElse-style, &.Java-if-style, &.Java-ifElse-style, &.Scratch-if-style, &.Scratch-ifElse-style, &.Pencil-ifElse-style, &.Pencil-if-style {
+    background-color: $ifElse-color;
+    
+    //else title will have margin top and bottom
+    .else-title-block {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .condition-block {
+      display: inline-block;
+      width: 90%;
+      min-height: 30px;
+
+      li {
+        margin: 0;
+      }
+    }
+  }// end of ifElse-style
+  
+  &.loop-style, &.Alice-loop-style {
+    background-color: $loop-color;
+
+    .condition-block {
+      display: inline-block;
+      height: 23px;
+      width: 80%;
+      min-height: 30px;
+
+      li {
+        margin: 0;
+      }
+    }
+  }
+
+  &.while-style, &.Alice-while-style, &.Python-while-style, &.Java-while-style, &.Scratch-when-style, &.Pencil-while-style, &.Pencil-read-style, &.Pencil-listen-style {
+    background-color: $while-color;
+
+    .while-title-block {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .condition-block {
+      display: inline-block;
+      height: 23px;
+      width: 80%;
+      min-height: 30px;
+
+      li {
+        margin: 0;
+      }
+    }
+  }
+
+  &.DIO-style, &.Alice-DIO-style {
+    background-color: $DIO-color;
+  }
+
+  &.DT-style, &.Alice-DT-style {
+    background-color: $DT-color;
+  }
+
+  &.FAIO-style, &.Alice-FAIO-style, &.Scratch-repeat-style {
+    background-color: $FAIO-color;
+  }
+
+  &.Python-for-style, &.Java-for-style, &.Pencil-for-style {
+    background-color: $FAIO-color;
+
+    .for-title-block {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .condition-block {
+      display: inline-block;
+      height: 23px;
+      width: 80%;
+      min-height: 30px;
+
+      li {
+        margin: 0;
+      }
+    }
+  }
+
+  &.FAT-style, &.Alice-FAT-style {
+    background-color: $FAT-color;
+  }
+
+  &.wait-style, &.Alice-wait-style, &.Scratch-forever-style, &.Scratch-repeatUntil-style {
+    background-color: $wait-color;
+  }
+    
+
+  //common style for all
+  width: 100%;
+  min-height: 50px;
+  font-size: 25px;
+  color: #FFF;
+  border-radius: 10px;
+  padding: 1rem;  
+
+}
+
+
+
+
+
+
+/* Container Styles */
+
+
+.my-placeholder {
+  border: 3px solid #5fda33;
+  background-color: #3547bb;
+  height: 20px;
+}
+
+#restart-BTN {
+  background-color: #8b347a;
+}
+
+
