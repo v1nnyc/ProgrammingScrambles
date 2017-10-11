@@ -1,0 +1,23 @@
+<%#
+  Page Description:
+    This page let user selects to register as student or teacher
+
+  Tags:
+    student, teacher, register, sign up
+%>
+
+<div id="header">
+  <h4> Get Started As </h4>
+</div>
+
+<div class="field">
+  <%= form_tag("create", method: "post") do %>
+      <div class="submit-btn">
+        <input class="button  expanded large" type="submit" name="user_select" value="Teacher">
+      </div>
+
+      <div class="submit-btn">
+        <input class="button expanded large" type="submit" name="user_select" value="Student">
+      </div>
+  <% end %>
+</div>
